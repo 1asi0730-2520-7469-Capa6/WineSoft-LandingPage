@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "features": "Features",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Smart Monitoring for Liquor Production",
+    "subtitle": "Real-time control of critical parameters like temperature, humidity, and pressure in fermentation, distillation, and maturation processes.",
+    "cta": "Get Started Today"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "monitoring": {
+      "title": "Real-Time Monitoring",
+      "desc": "Monitor critical parameters like temperature, humidity, and pressure across all production stages with instant alerts."
+    },
+    "maintenance": {
+      "title": "Digital Maintenance",
+      "desc": "Streamline maintenance scheduling and inventory management with our comprehensive digital platform."
+    },
+    "quality": {
+      "title": "Quality Control",
+      "desc": "Ensure product quality and regulatory compliance with automated quality control systems."
+    },
+    "automation": {
+      "title": "Environmental Automation",
+      "desc": "Automated environmental controls optimize production conditions and reduce manual intervention."
+    },
+    "erp": {
+      "title": "ERP Integration",
+      "desc": "Seamlessly integrate with existing ERP systems for complete business process optimization."
+    },
+    "analytics": {
+      "title": "Analytics & Reporting",
+      "desc": "Comprehensive analytics and reporting tools to facilitate audits and improve decision-making."
+    }
+  },
+  "about": {
+    "title": "Optimize Your Production",
+    "desc1": "WineSoft is a comprehensive smart monitoring solution designed specifically for liquor production facilities. Our platform combines cutting-edge IoT technology with industry expertise to deliver real-time insights and control.",
+    "desc2": "With our flexible subscription model, you get specialized hardware, expert consulting services, and continuous support to ensure your production runs at peak efficiency while maintaining the highest quality standards."
+  },
+  "contact": {
+    "title": "Ready to Transform Your Production?",
+    "subtitle": "Contact us today to learn how WineSoft can optimize your liquor production processes.",
+    "button": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

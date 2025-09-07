@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WineSoft - Smart Monitoring for Liquor Production</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="#" class="logo">WineSoft</a>
+        <ul class="nav-links">
+          <li><a href="#features" data-i18n="nav.features">Features</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li>
+            <button class="lang-switcher" onclick="toggleLanguage()">ES</button>
+          </li>
+        </ul>
+        <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-i18n="hero.title">Smart Monitoring for Liquor Production</h1>
+          <p data-i18n="hero.subtitle">
+            Real-time control of critical parameters like temperature, humidity,
+            and pressure in fermentation, distillation, and maturation
+            processes.
+          </p>
+          <a href="#contact" class="cta-button" data-i18n="hero.cta">
+            Get Started Today
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title" data-i18n="features.title">
+          Powerful Features
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🌡️</div>
+            <h3 data-i18n="features.monitoring.title">Real-Time Monitoring</h3>
+            <p data-i18n="features.monitoring.desc">
+              Monitor critical parameters...
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <h3 data-i18n="features.maintenance.title">Digital Maintenance</h3>
+            <p data-i18n="features.maintenance.desc">
+              Streamline maintenance scheduling...
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3 data-i18n="features.quality.title">Quality Control</h3>
+            <p data-i18n="features.quality.desc">Ensure product quality...</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3 data-i18n="features.automation.title">
+              Environmental Automation
+            </h3>
+            <p data-i18n="features.automation.desc">
+              Automated environmental controls...
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h3 data-i18n="features.erp.title">ERP Integration</h3>
+            <p data-i18n="features.erp.desc">
+              Seamlessly integrate with ERP...
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3 data-i18n="features.analytics.title">Analytics & Reporting</h3>
+            <p data-i18n="features.analytics.desc">
+              Comprehensive analytics...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 data-i18n="about.title">Optimize Your Production</h2>
+            <p data-i18n="about.desc1">
+              WineSoft is a comprehensive smart monitoring solution...
+            </p>
+            <p data-i18n="about.desc2">
+              With our flexible subscription model...
+            </p>
+          </div>
+          <div class="about-image">
+            <div class="about-visual">📈</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2 data-i18n="contact.title">Ready to Transform Your Production?</h2>
+          <p data-i18n="contact.subtitle">
+            Contact us today to learn how WineSoft can optimize...
+          </p>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Name / Nombre" required />
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Company / Empresa" required />
+              <input type="tel" placeholder="Phone / Teléfono" required />
+            </div>
+            <textarea placeholder="Message / Mensaje" required></textarea>
+            <button type="submit" class="cta-button" data-i18n="contact.button">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 WineSoft.
+          <span data-i18n="footer.rights">All rights reserved.</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

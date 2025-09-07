@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "features": "Características",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Monitoreo Inteligente para Producción de Licores",
+    "subtitle": "Control en tiempo real de parámetros críticos como temperatura, humedad y presión en procesos de fermentación, destilación y maduración.",
+    "cta": "Comenzar Hoy"
+  },
+  "features": {
+    "title": "Características Poderosas",
+    "monitoring": {
+      "title": "Monitoreo en Tiempo Real",
+      "desc": "Monitorea parámetros críticos como temperatura, humedad y presión en todas las etapas de producción con alertas instantáneas."
+    },
+    "maintenance": {
+      "title": "Mantenimiento Digital",
+      "desc": "Optimiza la programación de mantenimiento y gestión de inventarios con nuestra plataforma digital integral."
+    },
+    "quality": {
+      "title": "Control de Calidad",
+      "desc": "Garantiza la calidad del producto y cumplimiento normativo con sistemas de control de calidad automatizados."
+    },
+    "automation": {
+      "title": "Automatización Ambiental",
+      "desc": "Controles ambientales automatizados optimizan las condiciones de producción y reducen la intervención manual."
+    },
+    "erp": {
+      "title": "Integración ERP",
+      "desc": "Integración perfecta con sistemas ERP existentes para optimización completa de procesos empresariales."
+    },
+    "analytics": {
+      "title": "Análisis e Informes",
+      "desc": "Herramientas integrales de análisis e informes para facilitar auditorías y mejorar la toma de decisiones."
+    }
+  },
+  "about": {
+    "title": "Optimiza Tu Producción",
+    "desc1": "WineSoft es una solución integral de monitoreo inteligente diseñada específicamente para plantas de producción de licores. Nuestra plataforma combina tecnología IoT de vanguardia con experiencia industrial para brindar información y control en tiempo real.",
+    "desc2": "Con nuestro modelo de suscripción flexible, obtienes hardware especializado, servicios de consultoría experta y soporte continuo para garantizar que tu producción funcione con máxima eficiencia mientras mantiene los más altos estándares de calidad."
+  },
+  "contact": {
+    "title": "¿Listo para Transformar Tu Producción?",
+    "subtitle": "Contáctanos hoy para conocer cómo WineSoft puede optimizar tus procesos de producción de licores.",
+    "button": "Enviar Mensaje"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}
