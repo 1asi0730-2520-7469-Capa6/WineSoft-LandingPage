@@ -46,6 +46,9 @@ function updateContent(translations) {
 
   // Renderiza el equipo
   renderTeamSection(translations);
+  // Renderiza testimonios
+  renderTestimonialSlider(translations);
+  handleTestimonialArrows(translations);
 }
 
 // Get nested translation using dot notation (e.g., "nav.features")
@@ -353,6 +356,58 @@ function renderTeamSection(translations) {
   if (teamTitle && translations.team && translations.team.title) {
     teamTitle.textContent = translations.team.title;
   }
+}
+
+// === Testimonial Slider ===
+let testimonialIndex = 0;
+
+function renderTestimonialSlider(translations) {
+  const testimonials = translations.testimonials?.items || [];
+  const card = document.getElementById("testimonialCard");
+  const dotsContainer = document.getElementById("testimonialsDots");
+  if (!card || !dotsContainer || testimonials.length === 0) return;
+
+  // Render current testimonial
+  const t = testimonials[testimonialIndex];
+  card.innerHTML = `
+    <blockquote class="testimonial-quote">“${t.quote}”</blockquote>
+    <div class="testimonial-user">
+      <img class="testimonial-avatar" src="assets/${t.img}" alt="${t.name}" />
+      <div class="testimonial-user-info">
+        <span class="testimonial-name">${t.name}</span>
+        <span class="testimonial-role">${t.role}, ${t.company}</span>
+      </div>
+    </div>
+  `;
+
+  // Render dots
+  dotsContainer.innerHTML = testimonials.map((_, i) =>
+    `<button class="testimonial-dot${i === testimonialIndex ? ' active' : ''}" aria-label="${i+1}" data-index="${i}"></button>`
+  ).join("");
+
+  // Dots event
+  dotsContainer.querySelectorAll(".testimonial-dot").forEach(dot => {
+    dot.onclick = (e) => {
+      testimonialIndex = Number(dot.dataset.index);
+      renderTestimonialSlider(translations);
+    };
+  });
+}
+
+function handleTestimonialArrows(translations) {
+  const left = document.querySelector(".testimonial-arrow--left");
+  const right = document.querySelector(".testimonial-arrow--right");
+  const testimonials = translations.testimonials?.items || [];
+  if (!left || !right || testimonials.length === 0) return;
+
+  left.onclick = () => {
+    testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+    renderTestimonialSlider(translations);
+  };
+  right.onclick = () => {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    renderTestimonialSlider(translations);
+  };
 }
 
 // Main initialization function

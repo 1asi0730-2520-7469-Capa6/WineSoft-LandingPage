@@ -164,5 +164,31 @@
       {"name": "Joan Teves Samaniego", "role": "Developer", "img": "foto joan.jpg"},
       {"name": "Gonzalo Alonso Carhuancote Dominguez", "role": "Developer", "img": "foto Gonzalo.jpg"}
     ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "items": [
+      {
+        "quote": "WineSoft ha transformado nuestra producción. Ahora detectamos problemas antes de que ocurran y ahorramos mucho en mantenimiento.",
+        "name": "María López",
+        "role": "Jefa de Producción",
+        "company": "Bodegas del Sol",
+        "img": "persona1.jpg"
+      },
+      {
+        "quote": "El monitoreo en tiempo real nos da tranquilidad y confianza. El soporte técnico es excelente.",
+        "name": "Carlos Ramírez",
+        "role": "Gerente de Operaciones",
+        "company": "Viñedos Ramírez",
+        "img": "persona2.jpg"
+      },
+      {
+        "quote": "Gracias a WineSoft, hemos mejorado la calidad y reducido pérdidas. ¡Muy recomendable!",
+        "name": "Lucía Fernández",
+        "role": "Directora General",
+        "company": "Destilería Fernández",
+        "img": "persona3.jpg"
+      }
+    ]
   }
 }
