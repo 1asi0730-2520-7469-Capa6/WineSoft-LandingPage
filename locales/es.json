@@ -154,5 +154,15 @@
       "terms": "Términos de Servicio",
       "cookies": "Política de Cookies"
     }
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "members": [
+      {"name": "Said Conde, Yazid", "role": "Developer", "img": "foto yazid.jpg"},
+      {"name": "Stephano Moscoso Bejar", "role": "Developer", "img": "foto angelo.jpg"},
+      {"name": "Rodrigo Duran Díaz", "role": "Developer", "img": "foto Antonio.jpg"},
+      {"name": "Joan Teves Samaniego", "role": "Developer", "img": "foto joan.jpg"},
+      {"name": "Gonzalo Alonso Carhuancote Dominguez", "role": "Developer", "img": "foto Gonzalo.jpg"}
+    ]
   }
 }

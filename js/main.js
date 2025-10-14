@@ -43,6 +43,9 @@ function updateContent(translations) {
       element.placeholder = translation;
     }
   });
+
+  // Renderiza el equipo
+  renderTeamSection(translations);
 }
 
 // Get nested translation using dot notation (e.g., "nav.features")
@@ -314,6 +317,41 @@ function optimizePerformance() {
     document.querySelectorAll("img[data-src]").forEach((img) => {
       imageObserver.observe(img);
     });
+  }
+}
+
+
+const TEAM_MEMBERS = [
+  { name: "Said Conde, Yazid", role: "Developer", img: "foto yazid.jpg" },
+  { name: "Stephano Moscoso Bejar", role: "Developer", img: "foto angelo.jpg" },
+  { name: "Rodrigo Duran Díaz", role: "Developer", img: "foto Antonio.jpg" },
+  { name: "Joan Teves Samaniego", role: "Developer", img: "foto joan.jpg" },
+  { name: "Gonzalo Alonso Carhuancote Dominguez", role: "Developer", img: "foto Gonzalo.jpg" }
+];
+
+
+function renderTeamSection(translations) {
+  const teamGrid = document.getElementById("teamGrid");
+  if (!teamGrid) return;
+  // Reconstrucción completa de la sección de equipo para asegurar uniformidad visual
+  teamGrid.innerHTML = '';
+  TEAM_MEMBERS.forEach((member) => {
+    const card = document.createElement("div");
+    card.className = "team-card team-card--rebuild";
+    card.innerHTML = `
+      <div class="team-photo team-photo--rebuild">
+        <img src="assets/${member.img}" alt="${member.name}" />
+      </div>
+      <h3 class="team-name team-name--rebuild">${member.name}</h3>
+      <p class="team-role team-role--rebuild">${member.role}</p>
+    `;
+    teamGrid.appendChild(card);
+  });
+
+
+  const teamTitle = document.querySelector(".team-section .section-title");
+  if (teamTitle && translations.team && translations.team.title) {
+    teamTitle.textContent = translations.team.title;
   }
 }
 
