@@ -580,7 +580,6 @@ nav {
 .contact-form textarea,
 .contact-form select {
   padding: 1rem;
-  border: none;
   border-radius: 10px;
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -1158,6 +1157,125 @@ footer {
   }
 }
 
+/* About the Team Video Section */
+.about-team-section {
+  /* Use normal centered container width to align title with site content */
+  background: #ffffff;
+  padding: 120px 0 90px; /* top padding to clear fixed header */
+  position: relative;
+}
+.about-team-section > .container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column; /* title above video */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto; /* center container */
+}
+.about-team-content {
+  width: 100%;
+  max-width: 1200px; /* align content width with video */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem auto 0; /* center horizontally */
+  text-align: center;
+  padding: 0 12px; /* small horizontal padding */
+}
+.about-team-section .section-title { display:block; width: 100%; max-width: 1200px; margin: 0 auto 0.75rem; text-align: center; position: relative; z-index: 1005; }
+.about-team-video { display:flex; justify-content:center; width:100%; }
+.about-team-video .video-wrapper {
+  /* Keep video prominent but constrained so title stays centered visually */
+  width: min(1200px, 90vw);
+  max-width: 1200px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 32px 140px rgba(30, 41, 59, 0.18);
+  border: none;
+  background: #000;
+  position: relative;
+  z-index: 1002;
+  padding-top: 56.25%; /* 16:9 */
+  margin: 0 auto; /* ensure centered */
+}
+.about-team-video { width: 100%; display: flex; justify-content: center; }
+.about-team-video .video-wrapper { display: block; }
+
+/* Video poster + play button (lazy-load iframe) */
+.about-team-video .video-wrapper { position: relative; }
+.video-poster {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+  filter: drop-shadow(0 20px 60px rgba(30,41,59,0.08));
+  z-index: 1005; /* ensure poster sits above iframe to receive clicks */
+  pointer-events: auto; /* force reception of pointer events */
+  /* debug outline - remove after verifying clicks work */
+  outline: 2px dashed rgba(34,197,94,0.5);
+}
+.play-button {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.play-button::after {
+  content: '';
+  display: block;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid #fff;
+}
+.video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1002; }
+
+/* when iframe loaded, hide poster via JS (kept for transition) */
+.video-poster.hidden { opacity: 0; pointer-events: none; }
+
+@media (max-width: 900px) {
+   .about-team-content {
+     grid-template-columns: 1fr;
+     text-align: center;
+     gap: 1.25rem;
+     margin-top: 1rem;
+   }
+   .about-team-video .video-wrapper {
+     width: 100%;
+     max-width: 100%;
+     padding-top: 56.25%;
+   }
+ }
+
+/* Larger screens: make the video even more prominent */
+@media (min-width: 1400px) {
+  .about-team-content { max-width: 1400px; }
+  .about-team-video .video-wrapper { width: 85vw; max-width: 1400px; }
+}
+
+@media (max-width: 480px) {
+  .about-team-video .video-wrapper {
+    max-width: 100%;
+    padding-top: 56.25%;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .about-stats {
@@ -1361,13 +1479,13 @@ html {
 /* Form validation styles */
 .contact-form input:invalid,
 .contact-form textarea:invalid,
-contact-form select:invalid {
+.contact-form select:invalid {
   border-color: rgba(255, 107, 107, 0.5);
 }
 
 .contact-form input:valid,
 .contact-form textarea:valid,
-contact-form select:valid {
+.contact-form select:valid {
   border-color: rgba(102, 126, 234, 0.5);
 }
 
@@ -1382,4 +1500,17 @@ contact-form select:valid {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Accessibility utility: visually-hidden (screen-reader only) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
